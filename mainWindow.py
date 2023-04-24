@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QMainWindow, QApplication,QTableWidgetItem,QFileDi
 from PySide6.QtCore import QThread,Signal,Qt
 from PySide6.QtGui import QKeyEvent
 from dotenv import load_dotenv
-import baiduTable,settings,os,baiduTableResponse,exception
+import baiduTable,settings,os,baiduTableResponse
 load_dotenv()
 
 class tableRecognize(QThread):
