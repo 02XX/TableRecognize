@@ -15,44 +15,22 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLineEdit,
-    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
-    QStatusBar, QTableWidget, QTableWidgetItem, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QMainWindow, QMenuBar, QSizePolicy,
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_TableRecognize(object):
     def setupUi(self, TableRecognize):
         if not TableRecognize.objectName():
             TableRecognize.setObjectName(u"TableRecognize")
-        TableRecognize.resize(800, 617)
+        TableRecognize.resize(800, 754)
         self.centralwidget = QWidget(TableRecognize)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.image_file = QLineEdit(self.centralwidget)
-        self.image_file.setObjectName(u"image_file")
 
-        self.horizontalLayout.addWidget(self.image_file)
-
-        self.image_file_button = QPushButton(self.centralwidget)
-        self.image_file_button.setObjectName(u"image_file_button")
-
-        self.horizontalLayout.addWidget(self.image_file_button)
-
-        self.startRecognize = QPushButton(self.centralwidget)
-        self.startRecognize.setObjectName(u"startRecognize")
-
-        self.horizontalLayout.addWidget(self.startRecognize)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout)
-
-        self.tableWidget = QTableWidget(self.centralwidget)
-        self.tableWidget.setObjectName(u"tableWidget")
-
-        self.verticalLayout.addWidget(self.tableWidget)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
 
         TableRecognize.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(TableRecognize)
@@ -70,7 +48,5 @@ class Ui_TableRecognize(object):
 
     def retranslateUi(self, TableRecognize):
         TableRecognize.setWindowTitle(QCoreApplication.translate("TableRecognize", u"MainWindow", None))
-        self.image_file_button.setText(QCoreApplication.translate("TableRecognize", u"\u56fe\u7247\u5730\u5740", None))
-        self.startRecognize.setText(QCoreApplication.translate("TableRecognize", u"\u5f00\u59cb\u8bc6\u522b", None))
     # retranslateUi
 

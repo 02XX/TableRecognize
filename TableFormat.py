@@ -1,4 +1,7 @@
-def formatTable(response:dict)->list:
+
+
+def baiduTableFormat(response:dict)->list:
+    print(response)
     maxRow = 0
     maxColum =0
     #找到最大行列
@@ -7,6 +10,10 @@ def formatTable(response:dict)->list:
             maxRow = item["row_start"]
         if item["col_start"] > maxColum:
             maxColum = item["col_start"]
+        if item["row_end"] > maxRow:
+            maxRow = item["row_end"]
+        if item["col_end"] > maxColum:
+            maxColum = item["col_end"]
     table = [[None]*(maxColum+1) for i in range(maxRow+1)]
 
     for item in response["tables_result"][0]["body"]:

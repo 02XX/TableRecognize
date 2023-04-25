@@ -10,6 +10,8 @@ class settings(QWidget):
         self.ui = Ui_settings()
         self.ui.setupUi(self)
 
+        self.setWindowTitle("设置")
+
         self.ui.apply.clicked.connect(self.onApply)
         self.ui.confirm.clicked.connect(self.onConfirm)
     

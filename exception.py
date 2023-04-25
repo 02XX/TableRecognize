@@ -3,3 +3,6 @@ class imageError(Exception):
 
 class UnknownError(Exception):
     pass
+
+class NetworkError(Exception):
+    pass

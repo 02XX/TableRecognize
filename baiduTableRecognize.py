@@ -39,7 +39,7 @@ def baiduTableRecognize(api_key,secret_key,model:str,*arg) -> dict:
         #- true： 输出单元格内文字的外接四边形四角点坐标，若文字折行，则分行分别输出
         "cell_contents": "false"
     }
-
+    
     #识别方式
     if model not in ("image,url,pdf_file"):
         raise ValueError("you must choose one of image,url or pdf_file")
